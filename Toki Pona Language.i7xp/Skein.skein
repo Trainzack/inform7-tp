@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02DCA6D0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02DCA6D0"/>
+  <item nodeId="node-0x02DCA6D0">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Test Testatory 1&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 210818 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;tomo suli&#x000A;You can see tu fruits, a thing, a supporter and a container (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+  </item>
+</Skein>
