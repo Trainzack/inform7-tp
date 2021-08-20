@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-3">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-34"/>
+  <activeNode nodeId="node-145"/>
   <item nodeId="node-3">
-    <command xml:space="preserve">Toki Pona Tests</command>
-    <result xml:space="preserve">Toki Pona Tests&#x000A;An Interactive Fiction by Eli&#x000A;Release 1 / Serial number 210818 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;tomo suli&#x000A;sina lukin e tu kili, an ijo, a supa and a poki (closed) lon ni.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">tests</command>
+    <result xml:space="preserve">Toki Pona Tests&#x000A;An Interactive Fiction by Eli&#x000A;Release 1 / Serial number 210819 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;tomo suli&#x000A;sina lukin e tu kili, an ijo, a supa, a poki (closed) and jan Ili lon ni.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -13,6 +13,22 @@
       <child nodeId="node-19"/>
       <child nodeId="node-31"/>
       <child nodeId="node-32"/>
+      <child nodeId="node-35"/>
+      <child nodeId="node-54"/>
+      <child nodeId="node-57"/>
+      <child nodeId="node-71"/>
+      <child nodeId="node-73"/>
+      <child nodeId="node-76"/>
+      <child nodeId="node-77"/>
+      <child nodeId="node-84"/>
+      <child nodeId="node-91"/>
+      <child nodeId="node-94"/>
+      <child nodeId="node-95"/>
+      <child nodeId="node-112"/>
+      <child nodeId="node-122"/>
+      <child nodeId="node-126"/>
+      <child nodeId="node-137"/>
+      <child nodeId="node-143"/>
     </children>
   </item>
   <item nodeId="node-4">
@@ -274,6 +290,957 @@
   <item nodeId="node-34">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">tomo suli&#x000A;sina lukin e tu kili, an ijo, a supa and a poki (closed) lon ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-35">
+    <command xml:space="preserve">take red</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-36"/>
+    </children>
+  </item>
+  <item nodeId="node-36">
+    <command xml:space="preserve">tak aerasdfs </command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-37"/>
+    </children>
+  </item>
+  <item nodeId="node-37">
+    <command xml:space="preserve">take aerasdfs </command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-38"/>
+    </children>
+  </item>
+  <item nodeId="node-38">
+    <command xml:space="preserve">take him</command>
+    <result xml:space="preserve">I'm not sure what 'him' refers to.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-39"/>
+    </children>
+  </item>
+  <item nodeId="node-39">
+    <command xml:space="preserve">take it</command>
+    <result xml:space="preserve">tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-40"/>
+    </children>
+  </item>
+  <item nodeId="node-40">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">sina jo:&#x000A;  a poki (closed)&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-41"/>
+    </children>
+  </item>
+  <item nodeId="node-41">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">tomo lili&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-42"/>
+    </children>
+  </item>
+  <item nodeId="node-42">
+    <command xml:space="preserve">take it</command>
+    <result xml:space="preserve">sina ken ala tawa jo e poki tan ni: tenpo ni la sina jo e ona.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-43"/>
+    </children>
+  </item>
+  <item nodeId="node-43">
+    <command xml:space="preserve">sorry</command>
+    <result xml:space="preserve">Oh, don't apologise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-44"/>
+    </children>
+  </item>
+  <item nodeId="node-44">
+    <command xml:space="preserve">sorry</command>
+    <result xml:space="preserve">Oh, don't apologise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-45"/>
+    </children>
+  </item>
+  <item nodeId="node-45">
+    <command xml:space="preserve">sorry</command>
+    <result xml:space="preserve">Oh, don't apologise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-46"/>
+    </children>
+  </item>
+  <item nodeId="node-46">
+    <command xml:space="preserve">oopz</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-47"/>
+    </children>
+  </item>
+  <item nodeId="node-47">
+    <command xml:space="preserve">oops</command>
+    <result xml:space="preserve">Sorry, that can't be corrected.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-48"/>
+    </children>
+  </item>
+  <item nodeId="node-48">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-49"/>
+    </children>
+  </item>
+  <item nodeId="node-49">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">tomo suli&#x000A;sina lukin e tu kili, an ijo and a supa lon ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-50"/>
+    </children>
+  </item>
+  <item nodeId="node-50">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">kili: tawa jo.&#x000A;kili: tawa jo.&#x000A;ijo: tawa jo.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to OPEN SIN, RESTORE a saved game, PIPI or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-51"/>
+    </children>
+  </item>
+  <item nodeId="node-51">
+    <command xml:space="preserve">open sin</command>
+    <result xml:space="preserve">Toki Pona Tests&#x000A;An Interactive Fiction by Eli&#x000A;Release 1 / Serial number 210818 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;tomo suli&#x000A;sina lukin e tu kili, an ijo, a supa and a poki (closed) lon ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-52"/>
+    </children>
+  </item>
+  <item nodeId="node-52">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">kili: tawa jo.&#x000A;kili: tawa jo.&#x000A;ijo: tawa jo.&#x000A;poki: tawa jo.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to OPEN SIN, RESTORE a saved game, PIPI or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-53"/>
+    </children>
+  </item>
+  <item nodeId="node-53">
+    <command xml:space="preserve">pipi</command>
+    <result xml:space="preserve"></result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-54">
+    <command xml:space="preserve">tawa jo e kili</command>
+    <result xml:space="preserve">tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-55"/>
+    </children>
+  </item>
+  <item nodeId="node-55">
+    <command xml:space="preserve">weka e kili</command>
+    <result xml:space="preserve">pana.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-56"/>
+    </children>
+  </item>
+  <item nodeId="node-56">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">sina jo ala.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-57">
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take off?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-58"/>
+    </children>
+  </item>
+  <item nodeId="node-58">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-59"/>
+    </children>
+  </item>
+  <item nodeId="node-59">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-60"/>
+    </children>
+  </item>
+  <item nodeId="node-60">
+    <command xml:space="preserve">tawa jo e kili</command>
+    <result xml:space="preserve">tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-61"/>
+    </children>
+  </item>
+  <item nodeId="node-61">
+    <command xml:space="preserve">a</command>
+    <result xml:space="preserve">sina jo:&#x000A;  a kili&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-62"/>
+    </children>
+  </item>
+  <item nodeId="node-62">
+    <command xml:space="preserve">moku e kili</command>
+    <result xml:space="preserve">That's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-63"/>
+    </children>
+  </item>
+  <item nodeId="node-63">
+    <command xml:space="preserve">insa e kili lon supa</command>
+    <result xml:space="preserve">That can't contain things.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-64"/>
+    </children>
+  </item>
+  <item nodeId="node-64">
+    <command xml:space="preserve">insa e kili lon poki</command>
+    <result xml:space="preserve">The poki is closed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-65"/>
+    </children>
+  </item>
+  <item nodeId="node-65">
+    <command xml:space="preserve">open poki</command>
+    <result xml:space="preserve">You open the poki.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-66"/>
+    </children>
+  </item>
+  <item nodeId="node-66">
+    <command xml:space="preserve">insa e kili lon poki</command>
+    <result xml:space="preserve">You put the kili into the poki.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-67"/>
+    </children>
+  </item>
+  <item nodeId="node-67">
+    <command xml:space="preserve">tawa jo e kili</command>
+    <result xml:space="preserve">tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-68"/>
+    </children>
+  </item>
+  <item nodeId="node-68">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">tomo suli&#x000A;sina lukin e an ijo, a supa and a poki (in which is a kili) lon ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-69"/>
+    </children>
+  </item>
+  <item nodeId="node-69">
+    <command xml:space="preserve">weka e ijo</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-70"/>
+    </children>
+  </item>
+  <item nodeId="node-70">
+    <command xml:space="preserve">remove kili from poki</command>
+    <result xml:space="preserve">tawa jo.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to OPEN SIN, RESTORE a saved game, PIPI or PALI WEKA e toki wawa nanpa pini?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-71">
+    <command xml:space="preserve">tawa anpa</command>
+    <result xml:space="preserve">But you aren't in anything at the moment.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-72"/>
+    </children>
+  </item>
+  <item nodeId="node-72">
+    <command xml:space="preserve">tawa sewi</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-73">
+    <command xml:space="preserve">x kili</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-74"/>
+    </children>
+  </item>
+  <item nodeId="node-74">
+    <command xml:space="preserve">l kili</command>
+    <result xml:space="preserve">I only understood you as far as wanting to look.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-75"/>
+    </children>
+  </item>
+  <item nodeId="node-75">
+    <command xml:space="preserve">l e kili</command>
+    <result xml:space="preserve">You see nothing special about the kili.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-76">
+    <command xml:space="preserve">amusing</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-77">
+    <command xml:space="preserve">pali weka</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-78"/>
+    </children>
+  </item>
+  <item nodeId="node-78">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-79"/>
+    </children>
+  </item>
+  <item nodeId="node-79">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-80"/>
+    </children>
+  </item>
+  <item nodeId="node-80">
+    <command xml:space="preserve">pali weka</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-81"/>
+    </children>
+  </item>
+  <item nodeId="node-81">
+    <command xml:space="preserve">pali</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-82"/>
+    </children>
+  </item>
+  <item nodeId="node-82">
+    <command xml:space="preserve">undo</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-83"/>
+    </children>
+  </item>
+  <item nodeId="node-83">
+    <command xml:space="preserve">oops</command>
+    <result xml:space="preserve">Sorry, that can't be corrected.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-84">
+    <command xml:space="preserve">tawa jo all</command>
+    <result xml:space="preserve">I only understood you as far as wanting to tawa.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-85"/>
+    </children>
+  </item>
+  <item nodeId="node-85">
+    <command xml:space="preserve">tawa jo ale</command>
+    <result xml:space="preserve">I only understood you as far as wanting to tawa.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-86"/>
+    </children>
+  </item>
+  <item nodeId="node-86">
+    <command xml:space="preserve">tawa jo e ale</command>
+    <result xml:space="preserve">kili: tawa jo.&#x000A;kili: tawa jo.&#x000A;ijo: tawa jo.&#x000A;poki: tawa jo.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to OPEN SIN, RESTORE a saved game, PIPI or PALI WEKA e toki wawa nanpa pini?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-87"/>
+    </children>
+  </item>
+  <item nodeId="node-87">
+    <command xml:space="preserve">pali weka</command>
+    <result xml:space="preserve">tomo suli&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-88"/>
+    </children>
+  </item>
+  <item nodeId="node-88">
+    <command xml:space="preserve">tawa jo e ale</command>
+    <result xml:space="preserve">kili: tawa jo.&#x000A;kili: tawa jo.&#x000A;ijo: tawa jo.&#x000A;poki: tawa jo.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to OPEN SIN, RESTORE a saved game, PIPI or PALI WEKA e toki wawa nanpa pini?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-89"/>
+    </children>
+  </item>
+  <item nodeId="node-89">
+    <command xml:space="preserve">pali weka</command>
+    <result xml:space="preserve">tomo suli&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-90"/>
+    </children>
+  </item>
+  <item nodeId="node-90">
+    <command xml:space="preserve">pali weka</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-91">
+    <command xml:space="preserve">pini</command>
+    <result xml:space="preserve">What do you want to pini e?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-92"/>
+    </children>
+  </item>
+  <item nodeId="node-92">
+    <command xml:space="preserve">x</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-93"/>
+    </children>
+  </item>
+  <item nodeId="node-93">
+    <command xml:space="preserve">tawa jo e ale taso kili</command>
+    <result xml:space="preserve">kili: tawa jo.&#x000A;ijo: tawa jo.&#x000A;poki: tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-94">
+    <command xml:space="preserve">todo</command>
+    <result xml:space="preserve">sina wile sitelen e nimi ijo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-95">
+    <command xml:space="preserve">purloin</command>
+    <result xml:space="preserve">What do you want to purloin?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-96"/>
+    </children>
+  </item>
+  <item nodeId="node-96">
+    <command xml:space="preserve">jan Nasin</command>
+    <result xml:space="preserve">[Purloined.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-97"/>
+    </children>
+  </item>
+  <item nodeId="node-97">
+    <command xml:space="preserve">drop jan</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-98"/>
+    </children>
+  </item>
+  <item nodeId="node-98">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-99"/>
+    </children>
+  </item>
+  <item nodeId="node-99">
+    <command xml:space="preserve">pana e jan</command>
+    <result xml:space="preserve">(tawa jan Nasin)&#x000A;Jan Nasin doesn't seem interested.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-100"/>
+    </children>
+  </item>
+  <item nodeId="node-100">
+    <command xml:space="preserve">alasa</command>
+    <result xml:space="preserve">sina jo:&#x000A;  jan Nasin&#x000A;&#x000A;jan Nasin li alasa lon ijo ona.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-101"/>
+    </children>
+  </item>
+  <item nodeId="node-101">
+    <command xml:space="preserve">weka e jan</command>
+    <result xml:space="preserve">pana.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-102"/>
+    </children>
+  </item>
+  <item nodeId="node-102">
+    <command xml:space="preserve">pana e kili tawa jan</command>
+    <result xml:space="preserve">(first taking the kili)&#x000A;Jan Nasin doesn't seem interested.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-103"/>
+    </children>
+  </item>
+  <item nodeId="node-103">
+    <command xml:space="preserve">pana lukin e kili tawa jan</command>
+    <result xml:space="preserve">Jan Nasin is unimpressed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-104"/>
+    </children>
+  </item>
+  <item nodeId="node-104">
+    <command xml:space="preserve">kama lupe ala e jan</command>
+    <result xml:space="preserve">That seems unnecessary.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-105"/>
+    </children>
+  </item>
+  <item nodeId="node-105">
+    <command xml:space="preserve">pana wawa e kili tawa jan</command>
+    <result xml:space="preserve">You lack the nerve when it comes to the crucial moment.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-106"/>
+    </children>
+  </item>
+  <item nodeId="node-106">
+    <command xml:space="preserve">utala e jan</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-107"/>
+    </children>
+  </item>
+  <item nodeId="node-107">
+    <command xml:space="preserve">fuck</command>
+    <result xml:space="preserve">mi sona ala e nimi pali ni.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-108"/>
+    </children>
+  </item>
+  <item nodeId="node-108">
+    <command xml:space="preserve">uta olin e jan</command>
+    <result xml:space="preserve">Jan Nasin might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-109"/>
+    </children>
+  </item>
+  <item nodeId="node-109">
+    <command xml:space="preserve">uta e jan</command>
+    <result xml:space="preserve">Jan Nasin might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-110"/>
+    </children>
+  </item>
+  <item nodeId="node-110">
+    <command xml:space="preserve">luka olin e jan</command>
+    <result xml:space="preserve">Jan Nasin might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-111"/>
+    </children>
+  </item>
+  <item nodeId="node-111">
+    <command xml:space="preserve">touch jan</command>
+    <result xml:space="preserve">Jan Nasin might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-112">
+    <command xml:space="preserve">tawa e ijo tawa weka mi</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-113"/>
+    </children>
+  </item>
+  <item nodeId="node-113">
+    <command xml:space="preserve">tawa e ijo tawa mi</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-114"/>
+    </children>
+  </item>
+  <item nodeId="node-114">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-115"/>
+    </children>
+  </item>
+  <item nodeId="node-115">
+    <command xml:space="preserve">tawa e ijo tawa weka mi</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-116"/>
+    </children>
+  </item>
+  <item nodeId="node-116">
+    <command xml:space="preserve">tree</command>
+    <result xml:space="preserve">compass (584799) &#x000A;  the nasin lete&#x000A;  the nasin lete poka open suno&#x000A;  the nasin lete poka suno pini&#x000A;  the nasin seli&#x000A;  the nasin seli poka open suno&#x000A;  the nasin seli poka suno pini&#x000A;  the nasin pi open suno&#x000A;  the nasin pi suno pini&#x000A;  the sewi&#x000A;  the anpa&#x000A;  the insa&#x000A;  the selo&#x000A;(darkness object) (584831) &#x000A;(Inform Parser) (584863) &#x000A;(Inform Library) (584895) &#x000A;(property_numberspace_forcer) (584927) &#x000A;(ValuePropertyHolder_43) (584991) &#x000A;(ValuePropertyHolder_47) (585023) &#x000A;tomo suli (586015) &#x000A;  nena weka&#x000A;  yourself&#x000A;  tu kili&#x000A;  an ijo&#x000A;  a supa&#x000A;  a poki (closed)&#x000A;supa (586239) &#x000A;  an ilo suno&#x000A;poki (586303) &#x000A;  a poki telo&#x000A;tomo lili (586367) &#x000A;jan Nasin (586399) &#x000A;jan Ili (586431) &#x000A;  ilo toki&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-117"/>
+    </children>
+  </item>
+  <item nodeId="node-117">
+    <command xml:space="preserve">showheap</command>
+    <result xml:space="preserve">32756 of 32784 bytes free.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-118"/>
+    </children>
+  </item>
+  <item nodeId="node-118">
+    <command xml:space="preserve">showverb tawa</command>
+    <result xml:space="preserve">Verb 'tawa' &#x000A;     * -&gt; Go&#x000A;     * 'insa' / 'lon' -&gt; Enter&#x000A;     * 'ete' / 'weka' -&gt; Exit&#x000A;     * noun=Routine(343157) -&gt; Go&#x000A;     * 'insa' / 'lon' noun -&gt; Enter&#x000A;     * 'e' noun -&gt; Push&#x000A;     * 'anpa' 'e' noun -&gt; GetOff&#x000A;     * 'wawa' / 'mute' 'e' noun -&gt; Wave&#x000A;     * 'e' noun 'tawa' Routine(343972) -&gt; Pull&#x000A;     * 'e' noun 'tawa' 'weka' Routine(343972) -&gt; Push&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-119"/>
+    </children>
+  </item>
+  <item nodeId="node-119">
+    <command xml:space="preserve">showverb tawa e ijo</command>
+    <result xml:space="preserve">I only understood you as far as wanting to showverb that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-120"/>
+    </children>
+  </item>
+  <item nodeId="node-120">
+    <command xml:space="preserve">showverb tawa</command>
+    <result xml:space="preserve">Verb 'tawa' &#x000A;     * -&gt; Go&#x000A;     * 'insa' / 'lon' -&gt; Enter&#x000A;     * 'ete' / 'weka' -&gt; Exit&#x000A;     * noun=Routine(343157) -&gt; Go&#x000A;     * 'insa' / 'lon' noun -&gt; Enter&#x000A;     * 'e' noun -&gt; Push&#x000A;     * 'anpa' 'e' noun -&gt; GetOff&#x000A;     * 'wawa' / 'mute' 'e' noun -&gt; Wave&#x000A;     * 'e' noun 'tawa' Routine(343972) -&gt; Pull&#x000A;     * 'e' noun 'tawa' 'weka' Routine(343972) -&gt; Push&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-121"/>
+    </children>
+  </item>
+  <item nodeId="node-121">
+    <command xml:space="preserve">tawa e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-122">
+    <command xml:space="preserve">mi</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-123"/>
+    </children>
+  </item>
+  <item nodeId="node-123">
+    <command xml:space="preserve">sina</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-124"/>
+    </children>
+  </item>
+  <item nodeId="node-124">
+    <command xml:space="preserve">ona</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-125"/>
+    </children>
+  </item>
+  <item nodeId="node-125">
+    <command xml:space="preserve">tawa e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-126">
+    <command xml:space="preserve">tawa e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-127"/>
+    </children>
+  </item>
+  <item nodeId="node-127">
+    <command xml:space="preserve">showme tawa</command>
+    <result xml:space="preserve">nasin lete - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin lete"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin seli&#x000A;nasin seli - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin seli"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin lete&#x000A;nasin lete poka open suno - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin lete poka open suno"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin seli poka suno pini&#x000A;nasin lete poka suno pini - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin lete poka suno pini"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin seli poka open suno&#x000A;nasin seli poka open suno - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin seli poka open suno"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin lete poka suno pini&#x000A;nasin seli poka suno pini - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin seli poka suno pini"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin lete poka open suno&#x000A;nasin pi open suno - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin pi open suno"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin pi suno pini&#x000A;nasin pi suno pini - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "nasin pi suno pini"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: nasin pi open suno&#x000A;sewi - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "sewi"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: anpa&#x000A;anpa - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "anpa"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: sewi&#x000A;insa - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "insa"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: selo&#x000A;selo - direction&#x000A;singular-named, improper-named; list grouping key: none&#x000A;printed name: "selo"&#x000A;printed plural name: "nasin tawa"&#x000A;indefinite article: "the"&#x000A;opposite: insa&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-128"/>
+    </children>
+  </item>
+  <item nodeId="node-128">
+    <command xml:space="preserve">showverb tawa</command>
+    <result xml:space="preserve">Verb 'tawa' &#x000A;     * 'e' noun -&gt; Push&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-129"/>
+    </children>
+  </item>
+  <item nodeId="node-129">
+    <command xml:space="preserve">tawa e kili</command>
+    <result xml:space="preserve">Nothing obvious happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-130"/>
+    </children>
+  </item>
+  <item nodeId="node-130">
+    <command xml:space="preserve">tawa e poki</command>
+    <result xml:space="preserve">Nothing obvious happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-131"/>
+    </children>
+  </item>
+  <item nodeId="node-131">
+    <command xml:space="preserve">tawa e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-132"/>
+    </children>
+  </item>
+  <item nodeId="node-132">
+    <command xml:space="preserve">tawa jo e ijo</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-133"/>
+    </children>
+  </item>
+  <item nodeId="node-133">
+    <command xml:space="preserve">tawa jo ijo</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-134"/>
+    </children>
+  </item>
+  <item nodeId="node-134">
+    <command xml:space="preserve">kama jo ijo</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-135"/>
+    </children>
+  </item>
+  <item nodeId="node-135">
+    <command xml:space="preserve">kama jo e ijo</command>
+    <result xml:space="preserve">(the ijo)&#x000A;tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-136"/>
+    </children>
+  </item>
+  <item nodeId="node-136">
+    <command xml:space="preserve">luke e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-137">
+    <command xml:space="preserve">luke e ijot</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-138"/>
+    </children>
+  </item>
+  <item nodeId="node-138">
+    <command xml:space="preserve">luke e poki</command>
+    <result xml:space="preserve">You feel nothing unexpected.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-139"/>
+    </children>
+  </item>
+  <item nodeId="node-139">
+    <command xml:space="preserve">abstract jan tomo</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-140"/>
+    </children>
+  </item>
+  <item nodeId="node-140">
+    <command xml:space="preserve">nasin</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-141"/>
+    </children>
+  </item>
+  <item nodeId="node-141">
+    <command xml:space="preserve">luke e jan</command>
+    <result xml:space="preserve">Jan Ili might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-142"/>
+    </children>
+  </item>
+  <item nodeId="node-142">
+    <command xml:space="preserve">luke e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-143">
+    <command xml:space="preserve">kama jo ijo</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-144"/>
+    </children>
+  </item>
+  <item nodeId="node-144">
+    <command xml:space="preserve">kama jo e ijo</command>
+    <result xml:space="preserve">(the ijo)&#x000A;tawa jo.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-145"/>
+    </children>
+  </item>
+  <item nodeId="node-145">
+    <command xml:space="preserve">luke e ijo</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

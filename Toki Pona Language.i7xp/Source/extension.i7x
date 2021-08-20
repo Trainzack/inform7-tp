@@ -313,7 +313,7 @@ Inform, not just the Standard Rules. I’ve given each such extension a section 
 
 An object translates into TokiPona as tanijo.
 A room translates into TokiPona as tomo.
-A thing translates into TokiPona as ijo.
+[A thing translates into TokiPona as ijo.]
 A door translates into TokiPona as lupa.
 A container translates into TokiPona as poki.
 A vehicle translates into TokiPona as tomo tawa.
@@ -816,7 +816,7 @@ parser error internal rule response (D) is "mi sona ala e nanpa ni.". [I didn't 
 [!!!] parser error internal rule response (G) is "[We] [aren't] holding that!". [[We] [aren't] holding that!]
 [!!!] parser error internal rule response (H) is "You can't use multiple objects with that verb.". [You can't use multiple objects with that verb.]
 [!!!] parser error internal rule response (I) is "You can only use multiple objects once on a line.". [You can only use multiple objects once on a line.]
-[!!!] parser error internal rule response (J) is "I'm not sure what ['][pronoun i6 dictionary word]['] refers to.". [I'm not sure what ['][pronoun i6 dictionary word]['] refers to.]
+[...] parser error internal rule response (J) is "Mi sona ala e ni: seme ijo li ['][pronoun i6 dictionary word]['].". [I'm not sure what ['][pronoun i6 dictionary word]['] refers to.]
 [!!!] parser error internal rule response (K) is "[We] [can't] see ['][pronoun i6 dictionary word]['] ([the noun]) at the moment.". [[We] [can't] see ['][pronoun i6 dictionary word]['] ([the noun]) at the moment.]
 [!!!] parser error internal rule response (L) is "You excepted something not included anyway!". [You excepted something not included anyway!]
 [!!!] parser error internal rule response (M) is "You can only do that to something animate.". [You can only do that to something animate.]
@@ -859,17 +859,17 @@ parser error internal rule response (N) is "mi sona ala e nimi pali ni.". [That'
 [!!!] print obituary headline rule response (A) is " You have died ". [ You have died ]
 [!!!] print obituary headline rule response (B) is " You have won ". [ You have won ]
 [!!!] print obituary headline rule response (C) is " The End ". [ The End ]
-[!!!] immediately undo rule response (A) is "The use of 'undo' is forbidden in this story.". [The use of 'undo' is forbidden in this story.]
-[!!!] immediately undo rule response (B) is "You can't 'undo' what hasn't been done!". [You can't 'undo' what hasn't been done!]
-[!!!] immediately undo rule response (C) is "Your interpreter does not provide 'undo'. Sorry!". [Your interpreter does not provide 'undo'. Sorry!]
-[!!!] immediately undo rule response (D) is "'Undo' failed. Sorry!". ['Undo' failed. Sorry!]
+[!!!] immediately undo rule response (A) is "The use of 'pali weka' is forbidden in this story.". [The use of 'undo' is forbidden in this story.]
+[!!!] immediately undo rule response (B) is "You can't 'pali weka' what hasn't been done!". [You can't 'undo' what hasn't been done!]
+[!!!] immediately undo rule response (C) is "Your interpreter does not provide 'pali weka'. Sorry!". [Your interpreter does not provide 'undo'. Sorry!]
+[!!!] immediately undo rule response (D) is "'pali weka' failed. Sorry!". ['Undo' failed. Sorry!]
 [!!!] immediately undo rule response (E) is "[bracket]Previous turn undone.[close bracket]". [[bracket]Previous turn undone.[close bracket]]
-[!!!] immediately undo rule response (F) is "'Undo' capacity exhausted. Sorry!". ['Undo' capacity exhausted. Sorry!]
+[!!!] immediately undo rule response (F) is "'pali weka' capacity exhausted. Sorry!". ['Undo' capacity exhausted. Sorry!]
 [!!!] quit the game rule response (A) is "Are you sure you want to quit? ". [Are you sure you want to quit? ]
 [!!!] save the game rule response (A) is "Save failed.". [Save failed.]
-[!!!] save the game rule response (B) is "Ok.". [Ok.]
+save the game rule response (B) is "Pona.". [Ok.]
 [!!!] restore the game rule response (A) is "Restore failed.". [Restore failed.]
-[!!!] restore the game rule response (B) is "Ok.". [Ok.]
+restore the game rule response (B) is "Pona.". [Ok.]
 [!!!] restart the game rule response (A) is "Are you sure you want to restart? ". [Are you sure you want to restart? ]
 [!!!] restart the game rule response (B) is "Failed.". [Failed.]
 [!!!] verify the story file rule response (A) is "The game file has verified as intact.". [The game file has verified as intact.]
@@ -947,7 +947,7 @@ final question wording	only if victorious	topic		final response rule		final resp
 "RESTORE a saved game"	false	"restore"		immediately restore saved game rule		--
 "lukin e pali pi MUSI lili"	true	"musi"		--		amusing a victorious player
 "PIPI"	false	"pipi"		immediately quit rule		--
-"UNDO the last command"	false	"undo"		immediately undo rule		--
+"PALI WEKA e toki wawa nanpa pini"	false	"pali weka"		immediately undo rule		--
 
 
 Part 3.3 - Description of the player
@@ -997,10 +997,387 @@ don’t want to allow English verbs.
 This should also include grammar for the other built-in extensions (e.g., for “Rideable Vehicles”)
 ]
 
+Understand "mi" as "[mi]" when the story viewpoint is second person singular or the story viewpoint is second person plural.
+Understand "sina" as "[mi]" when the story viewpoint is first person singular or the story viewpoint is first person plural.
+Understand "ona" as "[mi]" when the story viewpoint is third person singular or the story viewpoint is third person plural.
+
+
+Chapter 4-2-1 - Standard actions concerning the actor's possessions 
+
+
+Understand nothing as taking inventory.
+Understand "alasa" or "poki" as Taking inventory.
+Understand "alasa e poki mi/--" as Taking inventory.
+
+Understand nothing as taking.
+Understand "kama jo e [things]" as Taking.
+Understand "lanpan e [things]" as Taking.
+
+Understand nothing as removing it from.
+Understand "kama jo e [things inside] lon [something]" as Removing it from.
+Understand "lanpan e [things inside] lon [something]" as Removing it from.
+
+Understand nothing as dropping.
+Understand "weka e [things preferably held]" as Dropping.
+Understand "pana e [things preferably held]" as Dropping.
+
+Understand nothing as putting it on.
+Understand "weka e [other things] lon [something]" as Putting it on.
+Understand "pana e [other things] lon [something]" as Putting it on.
+
+Understand nothing as inserting it into.
+Understand "insa e [other things] lon [something]" as Inserting it into.
+Understand "pana e [other things] lon insa [something]" as Inserting it into.
+Understand "weka e [other things] lon insa [something]" as Inserting it into.
+
+understand nothing as eating.
+Understand "moku e [something preferably held]" as Eating.
+
+Chapter 4-2-2 - Standard actions which move the actor 
+
+
+Understand nothing as Going.
+[Understand "tawa" as Going.]
+[Understand "tawa [direction]" as Going.]
+
+Understand nothing as Entering.
+[Understand "tawa insa/lon" as Entering.]
+[Understand "tawa insa/lon [something]" as Entering.]
+Understand "kama insa/lon" as Entering.
+Understand "kama insa/lon [something]" as Entering.
+
+Understand nothing as Exiting.
+[Understand "tawa ete/weka" as Exiting.]
+Understand "kama ete/weka" as Exiting.
+
+Understand nothing as Getting off.
+[Understand "tawa anpa e [something]" as Getting off.]
+
+
+Chapter 4-2-3 - Standard actions concerning the actor's vision 
+
+
+Understand nothing as Looking.
+Understand "lukin" or "l" as Looking.
+
+Understand nothing as Examining.
+Understand "lukin sitelen/-- e [something]" as Examining.
+Understand "l e [something]" as Examining.
+
+Understand nothing as Looking under.
+Understand "lukin lon/e anpa/noka [something]" as Looking under.
+Understand "l lon/e anpa/noka [something]" as Looking under.
+
+Understand nothing as Searching.
+Understand "lukin lon [something]" as Searching.
+Understand "l lon [something]" as Searching.
+Understand "alasa lon [something]" as Searching.
+Understand "lukin e insa lon [something]" as Searching.
+Understand "l e insa lon [something]" as Searching.
+
+Understand nothing as Consulting it about.
+Understand "alasa e [text] lon [something]" as Consulting it about (with nouns reversed).
+Understand "lukin e [text] lon [something]" as Consulting it about (with nouns reversed).
+
+
+Chapter 4-2-3 - Standard actions which change the state of things 
+
+
+Understand nothing as Locking it with.
+[Understand "TODO" as Locking it with.]
+
+Understand nothing as Unlocking it with.
+[Understand "TODO" as Unlocking it with.]
+
+
+Understand nothing as Switching on.
+Understand "open e [something]" as Switching on.
+
+Understand nothing as Switching off.
+Understand "pini e [something]" as Switching off.
+
+Understand nothing as Opening.
+Understand "open e [something]" as Opening.
+
+Understand nothing as Closing.
+Understand "pini e [something]" as Closing.
+
+Understand nothing as Wearing.
+Understand "len e [something]" as Wearing.
+[Understand "pana e [something] lon [player]" as wearing.]
+
+
+Understand nothing as Taking off.
+Understand "lan ala e [something]" as Taking off.
+
+Chapter 4-2-4 - Standard actions concerning other people 
+
+
+Understand nothing as Giving it to.
+Understand "pana e [something preferably held] tawa [someone]" as Giving it to.
+
+Understand nothing as Showing it to.
+Understand "pana lukin e [something preferably held] tawa [someone]" as Showing it to.
+
+Understand nothing as Waking.
+Understand "kama lupe ala e [someone]" as Waking.
+
+Understand nothing as Throwing it at.
+Understand "pana weka/-- wawa e [something preferably held] tawa [something]" as Throwing it at.
+
+Understand nothing as Attacking.
+Understand "utala luka/noka/moli/-- e [something]" as Attacking.
+Understand "pakala e [something]" as Attacking.
+
+Understand nothing as Kissing.
+Understand "uta olin/-- e [someone]" as Kissing.
+Understand "luka olin/-- e [someone]" as Kissing.
+Understand "jo olin/-- e [someone]" as Kissing.
+Understand "sijelo olin/-- e [someone]" as Kissing.
+Understand "olin uta/olin/luka/jo/sijelo/-- e [someone]" as Kissing.
+
+[
+Understand nothing as Answering it that.
+Understand "TODO" as Answering it that.
+
+Understand nothing as Telling it about.
+Understand "TODO" as Telling it about.
+
+Understand nothing as Asking it about.
+Understand "TODO" as Asking it about.
+
+Understand nothing as Asking it for.
+Understand "TODO" as Asking it for.
+]
+
+Chapter 4-2-5 - Standard actions which are checked but then do nothing unless rules intervene 
+
+
+Understand nothing as Waiting.
+Understand "awen" or "a" as Waiting.
+Understand "[mi]" as waiting.
+
+[Understand nothing as Touching.]
+[Understand "luke e [something]" or "pilin e [something]" as Touching.]
+
+Understand nothing as Waving.
+[Understand "tawa wawa/mute e [something]" as Waving.]
+
+Understand nothing as Pulling.
+[Understand "tawa e [something] tawa [mi]" as Pulling.]
+
+
+Understand nothing as Pushing.
+[Understand "tawa e [something] tawa weka [mi]" as Pushing.]
+Understand "tawa e [something]" as Pushing.
+Does the player mean pushing: it is likely.
+
+Understand nothing as Turning.
+Understand "TODO" as Turning.
+
+Understand nothing as Pushing it to.
+Understand "TODO" as Pushing it to.
+
+Understand nothing as Squeezing.
+Understand "TODO" as Squeezing.
+
+
+Chapter 4-2-6 - Standard actions which always do nothing unless rules intervene 
+
+[
+Understand nothing as Saying yes.
+Understand "TODO" as Saying yes.
+
+Understand nothing as Saying no.
+Understand "TODO" as Saying no.
+
+Understand nothing as Burning.
+Understand "TODO" as Burning.
+
+Understand nothing as Waking up.
+Understand "TODO" as Waking up.
+
+Understand nothing as Thinking.
+Understand "TODO" as Thinking.
+
+Understand nothing as Smelling.
+Understand "TODO" as Smelling.
+
+Understand nothing as Listening to.
+Understand "TODO" as Listening to.
+
+Understand nothing as Tasting.
+Understand "TODO" as Tasting.
+
+Understand nothing as Cutting.
+Understand "TODO" as Cutting.
+
+Understand nothing as Jumping.
+Understand "TODO" as Jumping.
+
+Understand nothing as Tying it to.
+Understand "TODO" as Tying it to.
+
+Understand nothing as Drinking.
+Understand "TODO" as Drinking.
+
+Understand nothing as Saying sorry.
+Understand "TODO" as Saying sorry.
+
+Understand nothing as Swinging.
+Understand "TODO" as Swinging.
+
+Understand nothing as Rubbing.
+Understand "TODO" as Rubbing.
+
+Understand nothing as Setting it to.
+Understand "TODO" as Setting it to.
+
+Understand nothing as Waving hands.
+Understand "TODO" as Waving hands.
+
+Understand nothing as Buying.
+Understand "TODO" as Buying.
+
+Understand nothing as Climbing.
+Understand "TODO" as Climbing.
+
+Understand nothing as Sleeping.
+Understand "TODO" as Sleeping.
+
+]
+
+Chapter 4-2-7 - Standard actions which happen out of world 
+
+[
+Understand nothing as Quitting the game.
+Understand "TODO" as Quitting the game.
+
+Understand nothing as Saving the game.
+Understand "TODO" as Saving the game.
+
+Understand nothing as Restoring the game.
+Understand "TODO" as Restoring the game.
+
+Understand nothing as Restarting the game.
+Understand "TODO" as Restarting the game.
+
+Understand nothing as Verifying the story file.
+Understand "TODO" as Verifying the story file.
+
+Understand nothing as Switching the story transcript on.
+Understand "TODO" as Switching the story transcript on.
+
+Understand nothing as Switching the story transcript off.
+Understand "TODO" as Switching the story transcript off.
+
+Understand nothing as Requesting the story file version.
+Understand "TODO" as Requesting the story file version.
+
+Understand nothing as Requesting the score.
+Understand "TODO" as Requesting the score.
+
+Understand nothing as Preferring abbreviated room descriptions.
+Understand "TODO" as Preferring abbreviated room descriptions.
+
+Understand nothing as Preferring unabbreviated room descriptions.
+Understand "TODO" as Preferring unabbreviated room descriptions.
+
+Understand nothing as Preferring sometimes abbreviated room descriptions.
+Understand "TODO" as Preferring sometimes abbreviated room descriptions.
+
+Understand nothing as Switching score notification on.
+Understand "TODO" as Switching score notification on.
+
+Understand nothing as Switching score notification off.
+Understand "TODO" as Switching score notification off.
+
+Understand nothing as Requesting the pronoun meanings.
+Understand "TODO" as Requesting the pronoun meanings.
+
+]
+
+
 Part 4-3 - Command parser internals
 
 [I6 definitions LanguageVerb, LanguageVerbLikesAdverb and
 LanguageVerbMayBeName; and the keywords used by the parser (AGAIN1__WD, and so on).]
+
+Include (-
+
+[ LanguageVerb i;
+	switch (i) {
+	  'i//','inv','inventory':
+			   print "take inventory";
+	  'l//':   print "look";
+	  'x//':   print "examine";
+	  'z//':   print "wait";
+	  default: rfalse;
+	}
+	rtrue;
+];
+
+[ LanguageVerbLikesAdverb w;
+	if (w == 'look' or 'go' or 'push' or 'walk')
+		rtrue;
+	rfalse;
+];
+
+[ LanguageVerbMayBeName w;
+	if (w == 'long' or 'short' or 'normal' or 'brief' or 'full' or 'verbose')
+		rtrue;
+	rfalse;
+];
+
+-)  instead of "Commands" in "Language.i6t".
+
+[None of these commands support spaces! :( ]
+
+Include (-
+
+Constant AGAIN1__WD     = 'sin';    ![again]
+Constant AGAIN2__WD     = 's//';    ![g//]
+Constant AGAIN3__WD     = 'sin';    ![again]
+Constant OOPS1__WD      = 'pakala';    ![oops]
+Constant OOPS2__WD      = 'p//';    ![o//]
+Constant OOPS3__WD      = 'pakala';    ![oops]
+Constant UNDO1__WD      = 'pali';    ![undo]
+Constant UNDO2__WD      = 'pali weka';    ![undo]
+Constant UNDO3__WD      = 'pali weka';    ![undo]
+
+Constant ALL1__WD       = 'ale';    ![all]
+Constant ALL2__WD       = 'ali';    ![each]
+Constant ALL3__WD       = 'ale';    ![every]
+Constant ALL4__WD       = 'ale';    ![everything]
+Constant ALL5__WD       = 'ale';    ![both]
+Constant AND1__WD       = 'e';    ![and]
+Constant AND2__WD       = 'en';    ![and]
+Constant AND3__WD       = 'e';    ![and]
+Constant BUT1__WD       = 'taso';    ![but]
+Constant BUT2__WD       = 'taso';    ![except]
+Constant BUT3__WD       = 'taso';    ![but]
+Constant ME1__WD        = 'mi';    ![me]
+Constant ME2__WD        = 'mi';    ![myself]
+Constant ME3__WD        = 'mi';    ![self]
+Constant OF1__WD        = ';of';    ![of]
+Constant OF2__WD        = ';of';    ![of]
+Constant OF3__WD        = ';of';    ![of]
+Constant OF4__WD        = ';of';    ![of]
+Constant OTHER1__WD     = ';another';    ![another]
+Constant OTHER2__WD     = ';other';    ![other]
+Constant OTHER3__WD     = ';other';    ![other]
+Constant THEN1__WD      = ';then';    ![then]
+Constant THEN2__WD      = ';then';    ![then]
+Constant THEN3__WD      = ';then';    ![then]
+
+Constant NO1__WD        = 'a//';    ![n//]
+Constant NO2__WD        = 'ala';    ![no]
+Constant NO3__WD        = 'ala';    ![no]
+Constant YES1__WD       = 'l//';    ![y//]
+Constant YES2__WD       = 'lon';    ![yes]
+Constant YES3__WD       = 'lon';    ![yes]
+
+-) instead of "Vocabulary" in "Language.i6t".
 
 Part 4-4 - Informese translation of commands
 
@@ -1017,7 +1394,7 @@ Chapter: Numbers
 
 Example: * Number Test - Showing the various ways that numbers can be expressed in Toki Pona
 
-	"Number Test" by jan Ili (in TokiPona)
+	*:"Numbesr Test" by jan Ili (in TokiPona)
 
 	Include the TokiPona Language by jan Ili.
 

@@ -1,32 +1,24 @@
-"Test 1"
+"Numbesr Test"
 
 Include the TokiPona Language by jan Ili.
 
-A fruit is a kind of thing. A fruit translates into tokipona as kili.
+tomo sona is a room.
 
-tomo suli is a room. In tomo suli are tu kili.
-In tomo suli is a ijo.
-A backdrop called nena weka is in tomo suli.
-In tomo suli is a supa and a poki. A ilo suno is on supa.
-The poki is openable and closed.
-A poki telo is in poki.
-
-jan Nasin is a person in tomo. jan Nasin carries ilo toki.
-
-Every turn:
-	if the player carries tu kili:
-		end the story finally.
-		
-After taking inventory:
-	try jan nasin taking inventory.
-	
 When play begins:
-	let L be {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 23, 42, 76, 137, 4014};
+	let L be {-2147483647, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 23, 42, 76, 137, 4014, 100000, 100001, 2147483647};
+	say "[bold type]nanpa pi pona suli kepeken nasin nanpa pona li ni:[line break][roman type]";
 	repeat with n running through L:
-		say "[n]: [n kepeken nasin nanpa pona] | [n kepeken nasin nanpa suli] | [n kepeken nasin nanpa kijetesantakalu] | [n kepeken nasin nanpa kijetesantakalu wawa][line break]".
-
-[Tomo lili is sewi of Tomo Suli.]
-
-
-Test me with "go / take me / take kili / i / take ijo / i / take kili".
+		say "[n]: [n kepeken nasin nanpa pona][line break]";
+	say "[line break]";
+	say "[bold type]nanpa pi pona suli kepeken nasin nanpa suli li ni:[line break][roman type]";
+	repeat with n running through L:
+		say "[n]: [n kepeken nasin nanpa suli][line break]";
+	say "[line break]";
+	say "[bold type]nanpa pi pona suli kepeken nasin nanpa kijetesantakalu li ni:[line break][roman type]";
+	repeat with n running through L:
+		say "[n]: [n kepeken nasin nanpa kijetesantakalu][line break][roman type]";
+	say "[line break]";
+	say "[bold type]nanpa pi pona suli kepeken nasin nanpa kietesantakalu wawa li ni:[line break][roman type]";
+	repeat with n running through L:
+		say "[n]: [n kepeken nasin nanpa kijetesantakalu wawa][line break]";
 

@@ -88,26 +88,27 @@ Array LanguageNumbers table
 		ike = true;
 		n = -n;
 	}
-	
+
 	switch (n) {
 		1: print "wan";
 		2: print "tu";
 		default: print "mute";
 	}
-	
+
 	if (ike) {
 		print " ike";
 	}
-	
+
 	return;
 ];
 
-[ LargeNumber n ike space;
+[ LargeNumber n ike space c;
 	! Zero
 	if (n == 0) {
 		print "ala";
 		rfalse;
 	}
+
 
 	space = false;
 	ike = false;
@@ -116,42 +117,47 @@ Array LanguageNumbers table
 		ike = true;
 		n = -n;
 	}
-	
+
+	if (n > 100000) {
+		print "mute a";
+		return;
+	}
+
 	while (n >= 100) {
 		if (space) print " ";
 		print "ale";
 		n = n - 100;
 		space = true;
 	}
-	
+
 	while (n >= 20) {
 		if (space) print " ";
 		print "mute";
 		n = n - 20;
 		space = true;
 	}
-	
+
 	while (n >= 5) {
 		if (space) print " ";
 		print "luka";
 		n = n - 5;
 		space = true;
 	}
-	
+
 	while (n >= 2) {
 		if (space) print " ";
 		print "tu";
 		n = n - 2;
 		space = true;
 	}
-	
+
 	while (n >= 1) {
 		if (space) print " ";
 		print "wan";
 		n = n - 1;
 		space = true;
 	}
-	
+
 	if (ike) {
 		print " ike";
 	}
@@ -165,7 +171,7 @@ Array LanguageNumbers table
 		ike = true;
 		n = -n;
 	}
-	
+
 	if (n > 5) {
 		RaccoonNumber(n / 6, e); print " ";
 	}
@@ -178,7 +184,7 @@ Array LanguageNumbers table
 
 [RaccoonNumberEmph n;
 	style underline;
-	print (string) n;
+	print (cap) n;
 	style roman;
 ];
 
@@ -210,7 +216,7 @@ To say (something - number) kepeken nasin nanpa suli:
 
 To say (something - number) kepeken nasin nanpa kijetesantakalu:
 	(- RaccoonNumber({something}, false); say__n=({something}); -).
-	
+
 To say (something - number) kepeken nasin nanpa kijetesantakalu wawa:
 	(- RaccoonNumber({something}, true); say__n=({something}); -).
 
@@ -238,7 +244,7 @@ To say sina:
 		say "sina";
 	else:
 		say "ona";
-		
+
 [TODO: Maybe check if last object is sina or mi?]
 To say li:
 	let the item be the prior named object;
@@ -254,7 +260,7 @@ Chapter 2-2-2 - Pronouns and possessives for other objects
 They are named from the third-person viewpoint with the same number as the adaptive text viewpoint; so
 in the case of Toki Pona, we’ll go with third person singular. We define:
 	[ona]
-	
+
 ]
 
 To say ona/Ona:
@@ -325,7 +331,7 @@ A region translates into TokiPona as ma.
 A number translates into TokiPona as nanpa.
 A real number translates into TokiPona as nanpa namako.
 A time translates into TokiPona as nanpa tenpo.
-A truth state translates into TokiPona as tu kipisi. 
+A truth state translates into TokiPona as tu kipisi.
 A text translates into TokiPona as kulupu nimi.
 A unicode character translates into TokiPona as sitelen Junikot.
 A snippet translates into TokiPona as kipisi pi kulupu nimi.
@@ -378,7 +384,7 @@ See The English Syntax of Inform for more details.
 	(c) a default rule to use if none of these apply – add “s”.
 	It’s important to be as thorough as possible in covering irregularities and exceptions. (The ten most commonly used verbs in English and French, for example, are all irregular; but the writer will expect them to
 	work.)
-	
+
 In this case, it's dead simple as Toki Pona has no plurals!
 
 ]
@@ -391,7 +397,7 @@ language tokipona
 	*	0
 
 
--) in the Preform grammar. 
+-) in the Preform grammar.
 
 Chapter 2-2-6 - Cases
 
@@ -399,6 +405,9 @@ Chapter 2-2-6 - Cases
 nothing to do.]
 
 Chapter 2-2-7 - Times of day
+
+[Inclusions of the I6 routines PrintTimeOfDay, PrintTimeOfDayEnglish,
+and LanguageTimeOfDay.]
 
 Include (-
 [ PrintTimeOfDayEnglish t h m dir half;
@@ -419,13 +428,72 @@ Include (-
 
 Part 2-3 - Adjectives
 
+[This is new material. Adjectives in Inform can have six different forms:
+neuter singular, neuter plural, masculine singular, masculine plural, feminine singular, feminine plural. In
+English all six forms are always the same, but that’s not true in most other languages. Once again, we use
+tries to work from a base form (neuter singular) to the other five. For example, in French, suppose we start
+with “nouveau” as our base.
+	(a) The neuter singular is just “nouveau”.
+	(b) The trie <adjective-to-plural> makes the neuter plural (n.p.), but we don’t worry about this, because
+	French doesn’t use neuters anyway.
+	(c) The trie <adjective-to-masculine-singular> converts the n.s. to the m.s., but in French it doesn’t
+	change anything, i.e., we use the base text of the adjective as the m.s.
+	(d) The trie <adjective-to-feminine-singular> converts the n.s. to the f.s., turning “nouveau” into “nouvelle”.
+	(e) The trie <adjective-to-masculine-plural> converts the m.s. to the m.p., turning “nouveau” into “nouveaux”.
+	(f) The trie <adjective-to-feminine-plural> converts the f.s. to the f.p., turning “nouvelle” into “nouvelles”.
+A useful feature for adjectives: the following source text –
+	”Sample” (in French)
+	Conjugatorium is a room.
+	Test adjective (internal) with informatif.
+– causes Inform to print out all six forms for the adjective given, in this case, “informatif” (which doesn’t
+have to be one defined already).
+]
+
 Part 2-4 - Verbs
+
+[This is the most challenging part of the language extension to write. We have to
+explain to Inform how to construct every person, in every tense, of every verb in the language, even highly
+irregular ones. English and French are contrasting here: English has very little inflection in the verb, but
+has about 640 irregular verbs, and has spelling rules which depend on pronunciation; French has only about
+half as many irregulars, but gives them an enormous variety of word endings]
+
+[This funcationality is reported broken in 6M62]
 
 Chapter 2-4-1 - Verb conjugations
 
+[Preform grammar is used in three different ways in Inform: to
+specify simple syntax; or to specify a trie, a device for altering word endings; or to specify a verb conjugation.
+It’s an extremely flexible notation, allowing us to construct multiple stems and then apply endings depending
+on tense, mood (active or passive), sense (positive or negative), person, number; and we can mark certain
+words, such as participles, as needing adjectival agreement. This means that
+	In French craindre is a verb.
+will automatically create a text substitution “[craignis]” which can come out in about 100 different forms:
+“a crainte” (a female person has been feared), “craignirent” (third-person plural past historic active), and
+so on. But we only get these benefits by writing an exhaustively detailed description; for French, it took
+2200 lines of Preform code.
+
+See The English Syntax of Inform and “French Language” for explanations of the notation here.
+A useful feature for testing verb conjugation: the following source text –
+	”Sample” (in French)
+	Conjugatorium is a room.
+	Test verb (internal) with avoir.
+– causes Inform to print out its full conjugation for the verb “avoir” in French, and of course any verb can
+be placed there, including one which Inform doesn’t otherwise define.]
+
 Chapter 2-4-2 - Meaningful verbs
 
+[“Meaningful” verbs are the ones which are defined with a
+meaning, like this:
+	In French avoir is a verb meaning to have.
+	We write a definition like this corresponding to each verb defined by Inform: to be, to have, to relate, to
+	provide, to contain, and so on.
+Once again this chapter is divided by sections, one section on each built-in extension which defines verbs]
+
 Chapter 2-4-3 - Prepositions
+
+[And this is similar, but for prepositions:
+	In French ˆetre voisin de is a verb meaning to be adjacent to.
+]
 
 Volume 3 - Responses
 
@@ -452,20 +520,20 @@ standard respond to final question rule response (A) is "Please give one of the 
 print empty inventory rule response (A) is "[sina][ li] jo ala.". [[We] [are] carrying nothing.]
 print standard inventory rule response (A) is "[sina][ li] jo:[line break]". [[We] [are] carrying:[line break]]
 report other people taking inventory rule response (A) is "[actor] li alasa lon ijo ona.". [[The actor] [look] through [their] possessions.]
-can't take yourself rule response (A) is "[sina][ li] ken ala tawa jo e [noun] tan ni: [sina][ li] jo e [sina].". [[We] [are] always self-possessed.]
-can't take other people rule response (A) is "[sina][ li] tawa jo ala e [noun] tan ni: [ona][ li] wile ala e ni.". [I don't suppose [the noun] [would care] for that.]
-[...] can't take component parts rule response (A) is "[sina][ li] ken ala tawa jo e [noun] tan ni: [ona][ li] kipisi [whole].". [[regarding the noun][Those] [seem] to be a part of [the whole].]
-can't take people's possessions rule response (A) is "[sina][ li] tawa jo ala e [noun] tan ni: [owner][ li] jo [regarding the noun][ona].". [[regarding the noun][Those] [seem] to belong to [the owner].]
-can't take items out of play rule response (A) is "[sina][ li] ken ala tawa jo e [noun] tan ni: [regarding the noun][ona] lon ala ni.". [[regarding the noun][Those] [aren't] available.]
-can't take what you're inside rule response (A) is "[sina][ li] ken ala tawa jo e [noun] tan ni: [noun][ li] jo [sina].". [[We] [would have] to get [if noun is a supporter]off[otherwise]out of[end if] [the noun] first.]
-can't take what's already taken rule response (A) is "[sina][ li] ken ala tawa jo e [noun] tan ni: tenpo ni la [sina][ li] jo e [regarding the noun][ona].". [[We] already [have] [regarding the noun][those].]
+can't take yourself rule response (A) is "[sina][ li] ken ala kama jo e [noun] tan ni: [sina][ li] jo e [sina].". [[We] [are] always self-possessed.]
+can't take other people rule response (A) is "[sina][ li] kama jo ala e [noun] tan ni: [ona][ li] wile ala e ni.". [I don't suppose [the noun] [would care] for that.]
+[...] can't take component parts rule response (A) is "[sina][ li] ken ala kama jo e [noun] tan ni: [ona][ li] kipisi [whole].". [[regarding the noun][Those] [seem] to be a part of [the whole].]
+can't take people's possessions rule response (A) is "[sina][ li] kama jo ala e [noun] tan ni: [owner][ li] jo [regarding the noun][ona].". [[regarding the noun][Those] [seem] to belong to [the owner].]
+can't take items out of play rule response (A) is "[sina][ li] ken ala kama jo e [noun] tan ni: [regarding the noun][ona] lon ala ni.". [[regarding the noun][Those] [aren't] available.]
+can't take what you're inside rule response (A) is "[sina][ li] ken ala kama jo e [noun] tan ni: [noun][ li] jo [sina].". [[We] [would have] to get [if noun is a supporter]off[otherwise]out of[end if] [the noun] first.]
+can't take what's already taken rule response (A) is "[sina][ li] ken ala kama jo e [noun] tan ni: tenpo ni la [sina][ li] jo e [regarding the noun][ona].". [[We] already [have] [regarding the noun][those].]
 can't take scenery rule response (A) is "[sina][ li] ken ala jo e [noun].". [[regarding the noun][They're] hardly portable.]
 can only take things rule response (A) is "[sina][ li] ken ala jo e [noun].". [[We] [cannot] carry [the noun].]
 [!!!] can't take what's fixed in place rule response (A) is "[regarding the noun][They're] fixed in place.". [[regarding the noun][They're] fixed in place.]
 [...] use player's holdall to avoid exceeding carrying capacity rule response (A) is "(pana e [transferred item] lon [current working sack])[command clarification break]". [(putting [the transferred item] into [the current working sack] to make room)[command clarification break]]
 [!!!] can't exceed carrying capacity rule response (A) is "[We]['re] carrying too many things already.". [[We]['re] carrying too many things already.]
-standard report taking rule response (A) is "tawa jo.". [Taken.]
-standard report taking rule response (B) is "[actor][ li] tawa jo e [noun].". [[The actor] [pick] up [the noun].]
+standard report taking rule response (A) is "kama jo.". [Taken.]
+standard report taking rule response (B) is "[actor][ li] kama jo e [noun].". [[The actor] [pick] up [the noun].]
 [!!!] can't remove what's not inside rule response (A) is "But [regarding the noun][they] [aren't] there now.". [But [regarding the noun][they] [aren't] there now.]
 [!!!] can't remove from people rule response (A) is "[regarding the noun][Those] [seem] to belong to [the owner].". [[regarding the noun][Those] [seem] to belong to [the owner].]
 [!!!] can't drop yourself rule response (A) is "[We] [lack] the dexterity.". [[We] [lack] the dexterity.]
@@ -748,7 +816,7 @@ parser error internal rule response (D) is "mi sona ala e nanpa ni.". [I didn't 
 [!!!] parser error internal rule response (G) is "[We] [aren't] holding that!". [[We] [aren't] holding that!]
 [!!!] parser error internal rule response (H) is "You can't use multiple objects with that verb.". [You can't use multiple objects with that verb.]
 [!!!] parser error internal rule response (I) is "You can only use multiple objects once on a line.". [You can only use multiple objects once on a line.]
-[!!!] parser error internal rule response (J) is "I'm not sure what ['][pronoun i6 dictionary word]['] refers to.". [I'm not sure what ['][pronoun i6 dictionary word]['] refers to.]
+[...] parser error internal rule response (J) is "Mi sona ala e ni: seme ijo li ['][pronoun i6 dictionary word]['].". [I'm not sure what ['][pronoun i6 dictionary word]['] refers to.]
 [!!!] parser error internal rule response (K) is "[We] [can't] see ['][pronoun i6 dictionary word]['] ([the noun]) at the moment.". [[We] [can't] see ['][pronoun i6 dictionary word]['] ([the noun]) at the moment.]
 [!!!] parser error internal rule response (L) is "You excepted something not included anyway!". [You excepted something not included anyway!]
 [!!!] parser error internal rule response (M) is "You can only do that to something animate.". [You can only do that to something animate.]
@@ -791,17 +859,17 @@ parser error internal rule response (N) is "mi sona ala e nimi pali ni.". [That'
 [!!!] print obituary headline rule response (A) is " You have died ". [ You have died ]
 [!!!] print obituary headline rule response (B) is " You have won ". [ You have won ]
 [!!!] print obituary headline rule response (C) is " The End ". [ The End ]
-[!!!] immediately undo rule response (A) is "The use of 'undo' is forbidden in this story.". [The use of 'undo' is forbidden in this story.]
-[!!!] immediately undo rule response (B) is "You can't 'undo' what hasn't been done!". [You can't 'undo' what hasn't been done!]
-[!!!] immediately undo rule response (C) is "Your interpreter does not provide 'undo'. Sorry!". [Your interpreter does not provide 'undo'. Sorry!]
-[!!!] immediately undo rule response (D) is "'Undo' failed. Sorry!". ['Undo' failed. Sorry!]
+[!!!] immediately undo rule response (A) is "The use of 'pali weka' is forbidden in this story.". [The use of 'undo' is forbidden in this story.]
+[!!!] immediately undo rule response (B) is "You can't 'pali weka' what hasn't been done!". [You can't 'undo' what hasn't been done!]
+[!!!] immediately undo rule response (C) is "Your interpreter does not provide 'pali weka'. Sorry!". [Your interpreter does not provide 'undo'. Sorry!]
+[!!!] immediately undo rule response (D) is "'pali weka' failed. Sorry!". ['Undo' failed. Sorry!]
 [!!!] immediately undo rule response (E) is "[bracket]Previous turn undone.[close bracket]". [[bracket]Previous turn undone.[close bracket]]
-[!!!] immediately undo rule response (F) is "'Undo' capacity exhausted. Sorry!". ['Undo' capacity exhausted. Sorry!]
+[!!!] immediately undo rule response (F) is "'pali weka' capacity exhausted. Sorry!". ['Undo' capacity exhausted. Sorry!]
 [!!!] quit the game rule response (A) is "Are you sure you want to quit? ". [Are you sure you want to quit? ]
 [!!!] save the game rule response (A) is "Save failed.". [Save failed.]
-[!!!] save the game rule response (B) is "Ok.". [Ok.]
+save the game rule response (B) is "Pona.". [Ok.]
 [!!!] restore the game rule response (A) is "Restore failed.". [Restore failed.]
-[!!!] restore the game rule response (B) is "Ok.". [Ok.]
+restore the game rule response (B) is "Pona.". [Ok.]
 [!!!] restart the game rule response (A) is "Are you sure you want to restart? ". [Are you sure you want to restart? ]
 [!!!] restart the game rule response (B) is "Failed.". [Failed.]
 [!!!] verify the story file rule response (A) is "The game file has verified as intact.". [The game file has verified as intact.]
@@ -861,19 +929,445 @@ Section 3-1-6 (for use with Locksmith by Emily Short)
 [!!!] must have accessible the second noun rule response (A) is "Without holding [the second noun], [we] [can] do nothing.". [Without holding [the second noun], [we] [can] do nothing.]
 [!!!] lock debugging rule response (A) is "Unlocking [the item].". [Unlocking [the item].]
 [!!!] report universal unlocking rule response (A) is "A loud stereophonic click assures you that everything in the game has been unlocked.". [A loud stereophonic click assures you that everything in the game has been unlocked.]
-[!!!] 
+
 Part 3-2 - The Final Question
+
+[Translations used to replace the little section in the Standard
+Rules which defined options for the final question. This is no longer necessary, because a new feature of
+Inform allows tables to be replaced:
+Table of Final Question Options (replaced)
+final question wording ...
+"RECOMMENCER" ...
+...
+That replacement table occupies this part.]
+
+Table of Final Question Options (replaced)
+final question wording	only if victorious	topic		final response rule		final response activity
+"OPEN SIN"	false	"open sin"		immediately restart the VM rule		--
+"RESTORE a saved game"	false	"restore"		immediately restore saved game rule		--
+"lukin e pali pi MUSI lili"	true	"musi"		--		amusing a victorious player
+"PIPI"	false	"pipi"		immediately quit rule		--
+"PALI WEKA e toki wawa nanpa pini"	false	"pali weka"		immediately undo rule		--
+
+
+Part 3.3 - Description of the player
+
+Section 3.3.1 - People (in place of Section SR1/11 - People in Standard Rules by Graham Nelson)
+
+[We need to replace this whole section just to change the description of the player.]
+
+A person can be female or male. A person is usually male.
+A person can be neuter. A person is usually not neuter.
+
+A person has a number called carrying capacity.
+The carrying capacity of a person is usually 100.
+
+Include (-
+	has transparent animate
+	with before NULL,
+-) when defining a person.
+
+The yourself is an undescribed person. The yourself is proper-named.
+
+The yourself is privately-named.
+Understand "your former self" or "my former self" or "former self" or
+	"former" as yourself when the player is not yourself.
+
+The description of yourself is usually "[sina][ li] nasa ala."
+
+The yourself object translates into I6 as "selfobj".
+Include (-
+	with saved_short_name (+ "yourself" +),
+-) when defining yourself.
+
 
 Volume 4 - Command parsing
 
 Part 4-1 - Pronouns and possessives in commands
 
+[The Inform 6 definitions LanguagePronouns
+and LanguageDescriptors.]
+
 Part 4-2 - Understand grammar
+
+[This is where the “Understand” sentences should appear:
+	Understand ”mode court” as preferring abbreviated room descriptions.
+and so on. Note that by default the English command grammar still exists; you need to remove it if you
+don’t want to allow English verbs.
+This should also include grammar for the other built-in extensions (e.g., for “Rideable Vehicles”)
+]
+
+Chapter 4-2-1 - Standard actions concerning the actor's possessions
+
+
+Understand nothing as taking inventory.
+Understand "a" or "alasa" or "poki" as Taking inventory.
+Understand "alasa e poki mi/--" as Taking inventory.
+
+Understand nothing as taking.
+Understand "kama jo e [things]" as Taking.
+Understand "lanpan e [things]" as Taking.
+
+Understand nothing as removing it from.
+Understand "kama jo e [things inside] lon [something]" as Removing it from.
+Understand "lanpan e [things inside] lon [something]" as Removing it from.
+
+Understand nothing as dropping.
+Understand "weka e [things preferably held]" as Dropping.
+
+Understand nothing as putting it on.
+Understand "weka e [other things] lon [something]" as Putting it on.
+Understand "pana e [other things] lon [something]" as Putting it on.
+
+Understand nothing as inserting it into.
+Understand "insa e [other things] lon [something]" as Inserting it into.
+Understand "pana e [other things] lon insa [something]" as Inserting it into.
+Understand "weka e [other things] lon insa [something]" as Inserting it into.
+
+understand nothing as eating.
+Understand "moku e [something preferably held]" as Eating.
+
+Chapter 4-2-2 - Standard actions which move the actor
+
+
+Understand nothing as Going.
+Understand "tawa" as Going.
+Understand "tawa [direction]" as Going.
+
+Understand nothing as Entering.
+Understand "tawa insa/lon" as Entering.
+Understand "tawa insa/lon [something]" as Entering.
+Understand "kama insa/lon" as Entering.
+Understand "kama insa/lon [something]" as Entering.
+
+Understand nothing as Exiting.
+Understand "tawa ete/weka" as Exiting.
+Understand "kama ete/weka" as Exiting.
+
+Understand nothing as Getting off.
+Understand "tawa anpa e [something]" as Getting off.
+
+
+Chapter 4-2-3 - Standard actions concerning the actor's vision
+
+
+Understand nothing as Looking.
+Understand "lukin" or "l" as Looking.
+
+Understand nothing as Examining.
+Understand "lukin sitelen/-- e [something]" as Examining.
+Understand "l e [something]" as Examining.
+
+Understand nothing as Looking under.
+Understand "lukin lon/e anpa/noka [something]" as Looking under.
+Understand "l lon/e anpa/noka [something]" as Looking under.
+
+Understand nothing as Searching.
+Understand "lukin lon [something]" as Searching.
+Understand "l lon [something]" as Searching.
+Understand "alasa lon [something]" as Searching.
+Understand "lukin e insa lon [something]" as Searching.
+Understand "l e insa lon [something]" as Searching.
+
+Understand nothing as Consulting it about.
+Understand "alasa e [text] lon [something]" as Consulting it about (with nouns reversed).
+Understand "lukin e [text] lon [something]" as Consulting it about (with nouns reversed).
+
+
+Chapter 4-2-3 - Standard actions which change the state of things
+
+[
+Understand nothing as Locking it with.
+Understand "TODO" as Locking it with.
+
+Understand nothing as Unlocking it with.
+Understand "TODO" as Unlocking it with.
+]
+
+Understand nothing as Switching on.
+Understand "open e [something]" as Switching on.
+
+Understand nothing as Switching off.
+Understand "pini e [something]" as Switching off.
+
+Understand nothing as Opening.
+Understand "open e [something]" as Opening.
+
+Understand nothing as Closing.
+Understand "pini e [something]" as Closing.
+
+Understand nothing as Wearing.
+Understand "len e [something]" as Wearing.
+[Understand "pana e [something] lon [player]" as wearing.]
+
+
+Understand nothing as Taking off.
+Understand "lan ala e [something]" as Taking off.
+
+Chapter 4-2-4 - Standard actions concerning other people
+
+
+Understand nothing as Giving it to.
+Understand "pana e [something preferably held] tawa [someone]" as Giving it to.
+[
+Understand nothing as Showing it to.
+Understand "TODO" as Showing it to.
+
+Understand nothing as Waking.
+Understand "TODO" as Waking.
+
+Understand nothing as Throwing it at.
+Understand "TODO" as Throwing it at.
+
+Understand nothing as Attacking.
+Understand "TODO" as Attacking.
+
+Understand nothing as Kissing.
+Understand "TODO" as Kissing.
+
+Understand nothing as Answering it that.
+Understand "TODO" as Answering it that.
+
+Understand nothing as Telling it about.
+Understand "TODO" as Telling it about.
+
+Understand nothing as Asking it about.
+Understand "TODO" as Asking it about.
+
+Understand nothing as Asking it for.
+Understand "TODO" as Asking it for.
+]
+
+Chapter 4-2-5 - Standard actions which are checked but then do nothing unless rules intervene
+
+[
+Understand nothing as Waiting.
+Understand "TODO" as Waiting.
+
+Understand nothing as Touching.
+Understand "TODO" as Touching.
+
+Understand nothing as Waving.
+Understand "TODO" as Waving.
+
+Understand nothing as Pulling.
+Understand "TODO" as Pulling.
+
+Understand nothing as Pushing.
+Understand "TODO" as Pushing.
+
+Understand nothing as Turning.
+Understand "TODO" as Turning.
+
+Understand nothing as Pushing it to.
+Understand "TODO" as Pushing it to.
+
+Understand nothing as Squeezing.
+Understand "TODO" as Squeezing.
+
+]
+
+Chapter 4-2-6 - Standard actions which always do nothing unless rules intervene
+
+[
+Understand nothing as Saying yes.
+Understand "TODO" as Saying yes.
+
+Understand nothing as Saying no.
+Understand "TODO" as Saying no.
+
+Understand nothing as Burning.
+Understand "TODO" as Burning.
+
+Understand nothing as Waking up.
+Understand "TODO" as Waking up.
+
+Understand nothing as Thinking.
+Understand "TODO" as Thinking.
+
+Understand nothing as Smelling.
+Understand "TODO" as Smelling.
+
+Understand nothing as Listening to.
+Understand "TODO" as Listening to.
+
+Understand nothing as Tasting.
+Understand "TODO" as Tasting.
+
+Understand nothing as Cutting.
+Understand "TODO" as Cutting.
+
+Understand nothing as Jumping.
+Understand "TODO" as Jumping.
+
+Understand nothing as Tying it to.
+Understand "TODO" as Tying it to.
+
+Understand nothing as Drinking.
+Understand "TODO" as Drinking.
+
+Understand nothing as Saying sorry.
+Understand "TODO" as Saying sorry.
+
+Understand nothing as Swinging.
+Understand "TODO" as Swinging.
+
+Understand nothing as Rubbing.
+Understand "TODO" as Rubbing.
+
+Understand nothing as Setting it to.
+Understand "TODO" as Setting it to.
+
+Understand nothing as Waving hands.
+Understand "TODO" as Waving hands.
+
+Understand nothing as Buying.
+Understand "TODO" as Buying.
+
+Understand nothing as Climbing.
+Understand "TODO" as Climbing.
+
+Understand nothing as Sleeping.
+Understand "TODO" as Sleeping.
+
+]
+
+Chapter 4-2-7 - Standard actions which happen out of world
+
+[
+Understand nothing as Quitting the game.
+Understand "TODO" as Quitting the game.
+
+Understand nothing as Saving the game.
+Understand "TODO" as Saving the game.
+
+Understand nothing as Restoring the game.
+Understand "TODO" as Restoring the game.
+
+Understand nothing as Restarting the game.
+Understand "TODO" as Restarting the game.
+
+Understand nothing as Verifying the story file.
+Understand "TODO" as Verifying the story file.
+
+Understand nothing as Switching the story transcript on.
+Understand "TODO" as Switching the story transcript on.
+
+Understand nothing as Switching the story transcript off.
+Understand "TODO" as Switching the story transcript off.
+
+Understand nothing as Requesting the story file version.
+Understand "TODO" as Requesting the story file version.
+
+Understand nothing as Requesting the score.
+Understand "TODO" as Requesting the score.
+
+Understand nothing as Preferring abbreviated room descriptions.
+Understand "TODO" as Preferring abbreviated room descriptions.
+
+Understand nothing as Preferring unabbreviated room descriptions.
+Understand "TODO" as Preferring unabbreviated room descriptions.
+
+Understand nothing as Preferring sometimes abbreviated room descriptions.
+Understand "TODO" as Preferring sometimes abbreviated room descriptions.
+
+Understand nothing as Switching score notification on.
+Understand "TODO" as Switching score notification on.
+
+Understand nothing as Switching score notification off.
+Understand "TODO" as Switching score notification off.
+
+Understand nothing as Requesting the pronoun meanings.
+Understand "TODO" as Requesting the pronoun meanings.
+
+]
+
 
 Part 4-3 - Command parser internals
 
+[I6 definitions LanguageVerb, LanguageVerbLikesAdverb and
+LanguageVerbMayBeName; and the keywords used by the parser (AGAIN1__WD, and so on).]
+
+Include (-
+
+[ LanguageVerb i;
+	switch (i) {
+	  'i//','inv','inventory':
+			   print "take inventory";
+	  'l//':   print "look";
+	  'x//':   print "examine";
+	  'z//':   print "wait";
+	  default: rfalse;
+	}
+	rtrue;
+];
+
+[ LanguageVerbLikesAdverb w;
+	if (w == 'look' or 'go' or 'push' or 'walk')
+		rtrue;
+	rfalse;
+];
+
+[ LanguageVerbMayBeName w;
+	if (w == 'long' or 'short' or 'normal' or 'brief' or 'full' or 'verbose')
+		rtrue;
+	rfalse;
+];
+
+-)  instead of "Commands" in "Language.i6t".
+
+[None of these commands support spaces! :( ]
+
+Include (-
+
+Constant AGAIN1__WD     = 'sin';    ![again]
+Constant AGAIN2__WD     = 's//';    ![g//]
+Constant AGAIN3__WD     = 'sin';    ![again]
+Constant OOPS1__WD      = 'pakala';    ![oops]
+Constant OOPS2__WD      = 'p//';    ![o//]
+Constant OOPS3__WD      = 'pakala';    ![oops]
+Constant UNDO1__WD      = 'pali';    ![undo]
+Constant UNDO2__WD      = 'pali weka';    ![undo]
+Constant UNDO3__WD      = 'pali weka';    ![undo]
+
+Constant ALL1__WD       = 'ale';    ![all]
+Constant ALL2__WD       = 'ali';    ![each]
+Constant ALL3__WD       = 'ale';    ![every]
+Constant ALL4__WD       = 'ale';    ![everything]
+Constant ALL5__WD       = 'ale';    ![both]
+Constant AND1__WD       = 'e';    ![and]
+Constant AND2__WD       = 'en';    ![and]
+Constant AND3__WD       = 'e';    ![and]
+Constant BUT1__WD       = 'taso';    ![but]
+Constant BUT2__WD       = 'taso';    ![except]
+Constant BUT3__WD       = 'taso';    ![but]
+Constant ME1__WD        = 'mi';    ![me]
+Constant ME2__WD        = 'mi';    ![myself]
+Constant ME3__WD        = 'mi';    ![self]
+Constant OF1__WD        = ';of';    ![of]
+Constant OF2__WD        = ';of';    ![of]
+Constant OF3__WD        = ';of';    ![of]
+Constant OF4__WD        = ';of';    ![of]
+Constant OTHER1__WD     = ';another';    ![another]
+Constant OTHER2__WD     = ';other';    ![other]
+Constant OTHER3__WD     = ';other';    ![other]
+Constant THEN1__WD      = ';then';    ![then]
+Constant THEN2__WD      = ';then';    ![then]
+Constant THEN3__WD      = ';then';    ![then]
+
+Constant NO1__WD        = 'a//';    ![n//]
+Constant NO2__WD        = 'ala';    ![no]
+Constant NO3__WD        = 'ala';    ![no]
+Constant YES1__WD       = 'l//';    ![y//]
+Constant YES2__WD       = 'lon';    ![yes]
+Constant YES3__WD       = 'lon';    ![yes]
+
+-) instead of "Vocabulary" in "Language.i6t".
+
 Part 4-4 - Informese translation of commands
 
+[The Inform 6 LanguageToInformese routine, and
+any supporting I6 code it needs.]
 
 TokiPona Language ends here.
 
@@ -885,22 +1379,26 @@ Chapter: Numbers
 
 Example: * Number Test - Showing the various ways that numbers can be expressed in Toki Pona
 
-	*:"Number Test" by jan Ili (in TokiPona)
-	
+	*:"Numbesr Test"
+
 	Include the TokiPona Language by jan Ili.
 
-	tomo sona is a room. 
-	
-	Every turn:
-		if the player carries tu kili:
-			end the story finally.
-			
-	After taking inventory:
-		try jan nasin taking inventory.
-		
+	tomo sona is a room.
+
 	When play begins:
-		let L be {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 23, 42, 76, 137, 4014};
+		let L be {-2147483647, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 23, 42, 76, 137, 4014, 100000, 100001, 2147483647};
+		say "[bold type]nanpa pi pona suli kepeken nasin nanpa pona li ni:[line break][roman type]";
 		repeat with n running through L:
-			say "[n]: [n kepeken nasin nanpa pona] | [n kepeken nasin nanpa suli] | [n kepeken nasin nanpa kijetesantakalu] | [n kepeken nasin nanpa kijetesantakalu wawa][line break]".
-
-
+			say "[n]: [n kepeken nasin nanpa pona][line break]";
+		say "[line break]";
+		say "[bold type]nanpa pi pona suli kepeken nasin nanpa suli li ni:[line break][roman type]";
+		repeat with n running through L:
+			say "[n]: [n kepeken nasin nanpa suli][line break]";
+		say "[line break]";
+		say "[bold type]nanpa pi pona suli kepeken nasin nanpa kijetesantakalu li ni:[line break][roman type]";
+		repeat with n running through L:
+			say "[n]: [n kepeken nasin nanpa kijetesantakalu][line break][roman type]";
+		say "[line break]";
+		say "[bold type]nanpa pi pona suli kepeken nasin nanpa kietesantakalu wawa li ni:[line break][roman type]";
+		repeat with n running through L:
+			say "[n]: [n kepeken nasin nanpa kijetesantakalu wawa][line break]";

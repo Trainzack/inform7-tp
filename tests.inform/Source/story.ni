@@ -15,14 +15,14 @@ A poki telo is in poki.
 tomo lili is north of tomo suli.
 
 
-jan Nasin is a person in tomo. jan Ili carries ilo toki.
+jan Ili is a person in tomo suli. jan Ili carries ilo toki.
 
 Every turn:
 	if the player carries tu kili:
 		end the story finally.
 		
-After taking inventory:
-	try jan nasin taking inventory.
+[After taking inventory:
+	try jan ili taking inventory.]
 	
 
 
